@@ -1,0 +1,86 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; }
+.header{
+    height:72px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 5%;
+    background:#000;
+}
+@media(max-width:640px){
+    .header{padding:0 24px;}    /* на мобильном чуть меньше */
+}
+
+.logo span:first-child { background:#ffe600; padding:0 .25rem; }
+.nav a { margin-left:1rem; color:#fff; text-decoration:none; }
+.nav a.active { text-decoration:underline; }
+.grid{
+    width:100%;max-width:1040px;margin:40px auto;
+    display:grid;gap:32px;
+    grid-template-columns:repeat(3,1fr);
+}
+.image-card img{
+    aspect-ratio:1/1;object-fit:cover;          /* единый квадратный вид */
+    width:100%;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:transform .3s;
+}
+.image-card:hover img{transform:scale(1.03)}
+@media(max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+    .grid{
+        grid-template-columns:1fr;
+        gap:24px;
+        padding:0 16px;
+    }
+}
+.fav-btn {
+    position:absolute; top:8px; right:8px;
+    border:none; background:transparent; font-size:1.5rem; cursor:pointer;
+}
+.loader { text-align:center; padding:2rem; }
+.btn-top {
+    position:fixed; bottom:2rem; right:2rem;
+    padding:.5rem 1rem; font-size:1.5rem;
+    border:none; border-radius:50%; background:#000; color:#fff; cursor:pointer;
+}
+.photo-page{
+    padding:40px;display:flex;flex-direction:column;align-items:center
+}
+.photo-page img{max-width:100%;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.photo-img{
+    max-width:100%;
+    max-height:80vh;
+    object-fit:contain;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+.photo-meta{margin-top:24px;text-align:center;color:#666}
+.photo-download{
+    margin-top:16px;display:inline-block;padding:10px 24px;border-radius:4px;
+    background:#ffe600;color:#000;font-weight:700;text-decoration:none
+}
+
+.empty-state{
+    height:calc(100vh - 72px);   /* на всю видимую область под Header’ом  */
+    display:flex;                /* выравниваем по центру */
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;              /* крупнее текста */
+    font-weight:500;
+    color:#666;
+}
+
+/* Заголовки страниц */
+.page-title{
+    margin:40px 0 24px;           /* сверху-снизу */
+    text-align:center;
+    font:700 32px/1.2 'Lato',sans-serif;
+    color:#222;
+}
+
+/* при мобильной ширине делаем чуть меньше */
+@media(max-width:640px){
+    .page-title{font-size:24px;margin:32px 0 20px;}
+}

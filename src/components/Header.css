@@ -1,0 +1,17 @@
+.header{
+    height:72px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 56px;               /* было 40px — чуть шире */
+    background:#000;
+}
+.logo img{height:48px}
+.nav a{
+    padding:8px 0;                /* вертикальный «внутренний» отступ */
+    margin-left:24px;
+    font:16px/1 'Lato',sans-serif;
+    color:#fff;text-decoration:none;
+}
+@media(max-width:640px){
+    .header{padding:0 20px}
+    .nav a{margin-left:12px}
+}

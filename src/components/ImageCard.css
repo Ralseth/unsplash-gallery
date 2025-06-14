@@ -1,0 +1,5 @@
+.image-card{position:relative}
+.image-card img{width:100%;height:auto;border-radius:4px;display:block}
+.image-card .fav-btn{position:absolute;top:8px;right:8px;border:none;
+    background:transparent;font-size:1.5rem;cursor:pointer}
+.image-card .fav-btn.active{filter:drop-shadow(0 0 4px #ff4081)}
